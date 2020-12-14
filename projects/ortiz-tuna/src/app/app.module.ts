@@ -12,6 +12,9 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import {TunaGameComponent} from './tuna-game.component';
+import {NgZorroModule} from './ng-zorro.module';
+
 
 registerLocaleData(en);
 
@@ -20,14 +23,16 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     TunaGroupComponent,
-    AnchoviesGroupComponent
+    AnchoviesGroupComponent,
+    TunaGameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgZorroModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
