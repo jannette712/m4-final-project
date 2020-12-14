@@ -25,9 +25,15 @@
             "aot": true,
             "assets": [
               "projects/ortiz-tuna/src/favicon.ico",
-              "projects/ortiz-tuna/src/assets"
+              "projects/ortiz-tuna/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "projects/ortiz-tuna/src/styles.scss"
             ],
             "scripts": []
@@ -91,6 +97,7 @@
               "projects/ortiz-tuna/src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "projects/ortiz-tuna/src/styles.scss"
             ],
             "scripts": []

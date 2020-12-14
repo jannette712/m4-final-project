@@ -20,11 +20,11 @@ p {
   margin: 0;
 }
 
-.spacer {
+.ot-spacer {
   flex: 1;
 }
 
-.toolbar {
+.ot-toolbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -37,20 +37,20 @@ p {
   font-weight: 600;
 }
 
-.toolbar img {
+.ot-toolbar img {
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo {
+.ot-toolbar #twitter-logo {
   height: 40px;
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo:hover {
+.ot-toolbar #twitter-logo:hover {
   opacity: 0.8;
 }
 
-.content {
+.ot-content {
   display: flex;
   margin: 82px auto 32px;
   // padding: 0 16px;
@@ -64,27 +64,27 @@ p {
   min-width: 1000px;
 }
 
-svg.material-icons {
+svg.ot-material-icons {
   height: 24px;
   width: auto;
 }
 
-svg.material-icons:not(:last-child) {
+svg.ot-material-icons:not(:last-child) {
   margin-right: 8px;
 }
 
-.card svg.material-icons path {
+.ot-card svg.ot-material-icons path {
   fill: #888;
 }
 
-.card-container {
+.ot-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
  // margin-top: 16px;
 }
 
-.card {
+.ot-card {
   // border-radius: 4px;
   border: 1px solid #eee;
   background-color: #fafafa;
@@ -114,7 +114,7 @@ svg.material-icons:not(:last-child) {
   border: 0;
 }
 
-.card-yelow {
+.ot-card-yelow {
 
   background-color: #FFDF00;
   border: 0;
@@ -126,20 +126,19 @@ svg.material-icons:not(:last-child) {
   border: 0;
 }
 
-.card-white {
+.ot-card-white {
 
   background-color: white;
   border: 0;
 }
 
-.card-double {
-  width: 664px;
+.ot-card-double {
+  width: 600px;
 }
 
-.card-double-image {
+.ot-card-double-image {
   padding: 0;
   border: 0;
-  height: 332px;
   position: relative;
   overflow: hidden;
 }
@@ -148,29 +147,29 @@ svg.material-icons:not(:last-child) {
 
 }
 
-.card-container .card:not(:last-child) {
+.ot-card-container .ot-card:not(:last-child) {
   margin-right: 0;
 }
 
-.card.card-small {
+.ot-card.card-small {
   height: 16px;
   width: 168px;
 }
 
-.card-container .card:not(.highlight-card) {
+.ot-card-container .ot-card:not(.highlight-card) {
   cursor: pointer;
 }
 
-.card-container .card:not(.highlight-card):hover {
+.ot-card-container .ot-card:not(.highlight-card):hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }
 
-.card-container .card:not(.highlight-card):hover .material-icons path {
+.ot-card-container .ot-card:not(.highlight-card):hover .ot-material-icons path {
   fill: rgb(105, 103, 103);
 }
 
-.card.highlight-card {
+.ot-card.highlight-card {
   background-color: #1976d2;
   color: white;
   font-weight: 600;
@@ -180,7 +179,7 @@ svg.material-icons:not(:last-child) {
   position: relative;
 }
 
-.card.card.highlight-card span {
+.ot-card.ot-card.highlight-card span {
   margin-left: 60px;
 }
 
@@ -295,7 +294,7 @@ footer a {
   background-position: -.5em;
 }
 
-.github-star-badge .material-icons {
+.github-star-badge .ot-material-icons {
   height: 16px;
   width: 16px;
   margin-right: 4px;
@@ -313,17 +312,17 @@ svg#clouds {
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
 
-  .card-container > *:not(.circle-link) ,
+  .ot-card-container > *:not(.circle-link) ,
   .terminal {
     width: 100%;
   }
 
-  .card:not(.highlight-card) {
+  .ot-card:not(.highlight-card) {
     height: 16px;
     margin: 8px 0;
   }
 
-  .card.highlight-card span {
+  .ot-card.highlight-card span {
     margin-left: 72px;
   }
 
@@ -340,7 +339,7 @@ svg#clouds {
   }
 }
 
-.harbour-space {
+.ot-harbour-space {
   width: 60%;
   margin: 0;
 }
