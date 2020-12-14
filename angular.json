@@ -3,5 +3,126 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ortiz-tuna": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ortiz-tuna",
+      "sourceRoot": "projects/ortiz-tuna/src",
+      "prefix": "ot",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ortiz-tuna",
+            "index": "projects/ortiz-tuna/src/index.html",
+            "main": "projects/ortiz-tuna/src/main.ts",
+            "polyfills": "projects/ortiz-tuna/src/polyfills.ts",
+            "tsConfig": "projects/ortiz-tuna/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ortiz-tuna/src/favicon.ico",
+              "projects/ortiz-tuna/src/assets"
+            ],
+            "styles": [
+              "projects/ortiz-tuna/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ortiz-tuna/src/environments/environment.ts",
+                  "with": "projects/ortiz-tuna/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ortiz-tuna:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ortiz-tuna:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ortiz-tuna:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ortiz-tuna/src/test.ts",
+            "polyfills": "projects/ortiz-tuna/src/polyfills.ts",
+            "tsConfig": "projects/ortiz-tuna/tsconfig.spec.json",
+            "karmaConfig": "projects/ortiz-tuna/karma.conf.js",
+            "assets": [
+              "projects/ortiz-tuna/src/favicon.ico",
+              "projects/ortiz-tuna/src/assets"
+            ],
+            "styles": [
+              "projects/ortiz-tuna/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ortiz-tuna/tsconfig.app.json",
+              "projects/ortiz-tuna/tsconfig.spec.json",
+              "projects/ortiz-tuna/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ortiz-tuna/e2e/protractor.conf.js",
+            "devServerTarget": "ortiz-tuna:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ortiz-tuna:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ortiz-tuna"
 }
