@@ -32,9 +32,13 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #3D4B92;
   color: white;
   font-weight: 600;
+}
+
+.ot-school {
+  float: right;
 }
 
 .ot-toolbar img {
@@ -348,4 +352,5 @@ svg#clouds {
 .ot-harbour-space {
   width: 60%;
   margin: 0;
+  float: right;
 }
