@@ -15,6 +15,7 @@ import en from '@angular/common/locales/en';
 import {TunaGameComponent} from './tuna-game.component';
 import {NgZorroModule} from './ng-zorro.module';
 import {HomeComponent} from './home.component';
+import {FadeInAnimationDirective} from './fade-in-animation.directive';
 
 
 registerLocaleData(en);
@@ -26,7 +27,8 @@ registerLocaleData(en);
     TunaGroupComponent,
     AnchoviesGroupComponent,
     TunaGameComponent,
-    HomeComponent
+    HomeComponent,
+    FadeInAnimationDirective
   ],
   imports: [
     BrowserModule,
