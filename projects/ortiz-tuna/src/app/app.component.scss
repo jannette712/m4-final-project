@@ -170,12 +170,12 @@ svg.ot-material-icons:not(:last-child) {
   cursor: pointer;
 }
 
-.ot-card-container .ot-card:not(.highlight-card):hover {
+.ot-card-container .ot-hover-card:not(.highlight-card):hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }
 
-.ot-card-container .ot-card:not(.highlight-card):hover .ot-material-icons path {
+.ot-card-container .ot-hover-card:not(.highlight-card):hover .ot-material-icons path {
   fill: rgb(105, 103, 103);
 }
 
