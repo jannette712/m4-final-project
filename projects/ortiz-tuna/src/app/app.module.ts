@@ -14,6 +14,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import {TunaGameComponent} from './tuna-game.component';
 import {NgZorroModule} from './ng-zorro.module';
+import {HomeComponent} from './home.component';
 
 
 registerLocaleData(en);
@@ -24,7 +25,8 @@ registerLocaleData(en);
     AppComponent,
     TunaGroupComponent,
     AnchoviesGroupComponent,
-    TunaGameComponent
+    TunaGameComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
