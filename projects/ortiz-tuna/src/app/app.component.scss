@@ -106,13 +106,17 @@ svg.ot-material-icons:not(:last-child) {
   line-height: 24px;
 }
 
-.card-image {
+.ot-card-no-padding {
+  padding: 0;
+}
+
+.ot-card-image {
   padding: 0;
   height: 332px;
   width: 332px;
   border: 0;
 }
-.card-orange {
+.ot-card-orange {
 
   background-color: #FF9000;
   border: 0;
@@ -124,13 +128,13 @@ svg.ot-material-icons:not(:last-child) {
   border: 0;
 }
 
-.card-blue-dark {
+.ot-card-blue-dark {
 
   background-color: #001860;
   border: 0;
 }
 
-.card-middle-blue {
+.ot-card-middle-blue {
 
   background-color: #354F79;
   border: 0;

@@ -16,6 +16,7 @@ import {TunaGameComponent} from './tuna-game.component';
 import {NgZorroModule} from './ng-zorro.module';
 import {HomeComponent} from './home.component';
 import {FadeInAnimationDirective} from './fade-in-animation.directive';
+import {TileTintComponent} from './tile-tint.component';
 
 
 registerLocaleData(en);
@@ -28,7 +29,8 @@ registerLocaleData(en);
     AnchoviesGroupComponent,
     TunaGameComponent,
     HomeComponent,
-    FadeInAnimationDirective
+    FadeInAnimationDirective,
+    TileTintComponent
   ],
   imports: [
     BrowserModule,
