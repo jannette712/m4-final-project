@@ -11,10 +11,8 @@ export class TunaGameComponent {
   @Input() title?: string;
   @Input() subtitle?: string;
 
-  constructor(private modal: NzModalRef) {}
+  constructor() {}
 
-  destroyModal(): void {
-    this.modal.destroy({ data: 'this the result data' });
-  }
+
 
 }
