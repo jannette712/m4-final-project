@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {TimelineMax, TweenMax, gsap} from 'gsap';
+import {gsap} from 'gsap';
 
 @Component({
   selector: 'ot-tuna-game',

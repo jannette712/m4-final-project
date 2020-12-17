@@ -22,6 +22,7 @@ export class TileHeroeComponent implements OnInit {
 
   ngOnInit(): void {
     this.tileHeroButtonRef.nativeElement.addEventListener('click', this.onMouseClick.bind(this));
+    this.tileHeroVideoRef.nativeElement.addEventListener('click', this.onMouseClick.bind(this));
   }
 
 }
