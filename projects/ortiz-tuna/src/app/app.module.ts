@@ -18,6 +18,7 @@ import {TileTintComponent} from './tile-tint.component';
 import {TilePuzzleComponent} from './tile-puzzle.component';
 import {Tile1Component} from './tile1.component';
 import {TileHeroeComponent} from './tile-heroe.component';
+import {TileFishingComponent} from './tile-fishing.component';
 
 
 registerLocaleData(en);
@@ -33,7 +34,8 @@ registerLocaleData(en);
     TileTintComponent,
     TilePuzzleComponent,
     Tile1Component,
-    TileHeroeComponent
+    TileHeroeComponent,
+    TileFishingComponent
   ],
   imports: [
     BrowserModule,
