@@ -1,18 +1,22 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {NzModalRef} from 'ng-zorro-antd/modal';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {TimelineMax, TweenMax, gsap} from 'gsap';
 
 @Component({
   selector: 'ot-tuna-game',
   templateUrl: './tuna-game.component.html',
   styleUrls: ['./tuna-game.component.scss']
 })
-export class TunaGameComponent {
+export class TunaGameComponent implements AfterViewInit {
 
-  @Input() title?: string;
-  @Input() subtitle?: string;
-
-  constructor() {}
+  // @ts-ignore
+  @ViewChild('ladyHeroe', {static: true}) ladyHeroe: ElementRef<HTMLCanvasElement>;
 
 
+  constructor() {
+  }
 
+
+  ngAfterViewInit(): void {
+    gsap.to(this.ladyHeroe.nativeElement, {scale: 5, yoyo: true, duration: 2, ease: 'bounce'});
+  }
 }
