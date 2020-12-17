@@ -1,8 +1,31 @@
 
-
+:host {
+  color: #FFFFFF;
+  font-size: 30px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
 
 
 
 canvas.ot-ortiz-canvas {
 
+
+}
+
+.ot-tint-image {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 20px 20px 47px;
+  margin-top: 80px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
 }
