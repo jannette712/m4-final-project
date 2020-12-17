@@ -29,21 +29,21 @@ export class Tile1Component implements OnInit {
 
     if (this.arrowDirection === 'down') {
       this.timeline = new TimelineMax()
+        .to(this.arrowBlueRef.nativeElement,
+          {scale: -1, ease: Power2.easeIn, duration: 0.5}
+        )
         .to(this.tile1imgRef.nativeElement, {
           y: -250,
-          duration: 0.5,
+          duration: 0.4,
           ease: Power2.easeIn,
         })
 
         .to(this.tile1textRef.nativeElement, {
           opacity: 1,
           y: -300,
-          duration: 0.5,
+          duration: 0.4,
           ease: Power2.easeIn,
-        })
-        .to(this.arrowBlueRef.nativeElement,
-          {scale: -1, ease: Power2.easeIn, duration: 0.5}
-        );
+        });
       this.arrowDirection = 'up';
       return;
     }
