@@ -1,0 +1,68 @@
+#wrapper {
+  width: 450px;
+  height: 450px;
+  z-index: 1;
+  position: absolute;
+  margin-left: 40%;
+}
+
+#tray {
+  width: 325px;
+  height: 325px;
+  position: absolute;
+  margin-left: 35px;
+  margin-top: 35px;
+  background-color: #111111;
+  z-index: 2;
+}
+
+.tiles {
+  width: 75px;
+  height: 75px;
+  z-index: 3;
+  margin-left: 5px;
+  margin-top: 5px;
+  float: left;
+  display: inline-block;
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+  z-index: 0;
+  position: absolute;
+}
+
+#blank {
+  background-color: #111111;
+  width: 75px;
+  height: 75px;
+  z-index: 3;
+  margin-left: 5px;
+  margin-top: 5px;
+  float: left;
+  position: relative;
+  opacity: 0;
+}
+
+#drawer {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: -2;
+}
+
+#heart {
+  width: 125px;
+  height: 125px;
+  margin-left: 150px;
+  margin-top: 85px;
+  position: absolute;
+  z-index: -1;
+}
+
+#prize {
+  margin-left: 43%;
+  margin-top: 50px;
+  position: absolute;
+}

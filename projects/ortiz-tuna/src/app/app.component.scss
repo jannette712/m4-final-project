@@ -1,5 +1,5 @@
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "EB Garamond", serif, sans-serif;
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
@@ -105,6 +105,10 @@ svg.ot-material-icons:not(:last-child) {
   align-items: center;
   transition: all 0.2s ease-in-out;
   line-height: 24px;
+}
+
+.ot-card-columns {
+  flex-direction: column;
 }
 
 .ot-card-no-padding {

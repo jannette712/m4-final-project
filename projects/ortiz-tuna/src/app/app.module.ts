@@ -15,6 +15,8 @@ import {NgZorroModule} from './ng-zorro.module';
 import {HomeComponent} from './home.component';
 import {FadeInAnimationDirective} from './fade-in-animation.directive';
 import {TileTintComponent} from './tile-tint.component';
+import {TilePuzzleComponent} from './tile-puzzle.component';
+import {Tile1Component} from './tile1.component';
 
 
 registerLocaleData(en);
@@ -27,7 +29,9 @@ registerLocaleData(en);
     TunaGameComponent,
     HomeComponent,
     FadeInAnimationDirective,
-    TileTintComponent
+    TileTintComponent,
+    TilePuzzleComponent,
+    Tile1Component
   ],
   imports: [
     BrowserModule,

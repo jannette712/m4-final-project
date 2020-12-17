@@ -1,0 +1,70 @@
+
+.ot-tile1-card {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ot-tile1-text {
+
+  align-items: center;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  font-size: 18px;
+  line-height: 30px;
+  color: white;
+
+ // transition: transform .3s linear;
+}
+
+.ot-tile1-image {
+   background: none;
+   border: none;
+   cursor: pointer;
+   flex: 1 0 auto;
+   margin: 0;
+   padding: 24px 20px 47px;
+}
+
+
+.ot-up-arrow {
+  --scale: 1;
+  --yPos: 20px;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='17'%3E%3Cpath fill='none' stroke='white' stroke-width='3' d='M1 1l14 13.5L29 1'/%3E%3C/svg%3E") 50% no-repeat;
+  border: none;
+  bottom: 16px;
+  content: "";
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  height: 40px;
+  left: calc(50% - 25px);
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 100%;
+  transform: scale(1) translateY(0);
+  width: 50px;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1) translateY(0);
+  }
+
+  &:focus {
+    outline: 1px solid #354F79;
+  }
+}
+
