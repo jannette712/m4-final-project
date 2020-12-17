@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {gsap, Power2} from 'gsap';
+import {gsap, Power2, TimelineMax} from 'gsap';
 
 @Component({
   selector: 'ot-tile1',
@@ -20,57 +20,43 @@ export class Tile1Component implements OnInit {
   // @ts-ignore textOne
   @ViewChild('tile1text', {static: true}) tile1textRef: ElementRef<HTMLElement>;
 
+  // @ts-ignore
+  timeline: TimelineMax = new TimelineMax();
 
-  constructor() {
-  }
-
-  onMouseOver(): void {
-    gsap.to(this.arrowBlueRef.nativeElement, {
-      opacity: 1,
-      duration: 0.2,
-      ease: Power2.easeIn,
-    });
-  }
-
-  onMouseOut(): void {
-    gsap.to(this.arrowBlueRef.nativeElement, {
-      opacity: 0,
-      duration: 0.2,
-      ease: Power2.easeIn,
-    });
-  }
+  arrowDirection: 'up' | 'down' = 'down';
 
   onMouseClick(): void {
 
-    this.tile1Ref.nativeElement.removeEventListener('mouseover', this.onMouseOver.bind(this));
-    this.tile1Ref.nativeElement.removeEventListener('mouseout', this.onMouseOut.bind(this));
+    if (this.arrowDirection === 'down') {
+      this.timeline = new TimelineMax()
+        .to(this.tile1imgRef.nativeElement, {
+          y: -250,
+          duration: 0.5,
+          ease: Power2.easeIn,
+        })
 
-    gsap.to(this.tile1imgRef.nativeElement, {
-      y: -250,
-      duration: 0.5,
-      ease: Power2.easeIn,
-    });
+        .to(this.tile1textRef.nativeElement, {
+          opacity: 1,
+          y: -300,
+          duration: 0.5,
+          ease: Power2.easeIn,
+        })
+        .to(this.arrowBlueRef.nativeElement,
+          {scale: -1, ease: Power2.easeIn, duration: 0.5}
+        );
+      this.arrowDirection = 'up';
+      return;
+    }
 
-    gsap.to(this.arrowBlueRef.nativeElement, {
-      opacity: 0,
-      visibility: 'hidden',
-      duration: 1,
-      ease: Power2.easeIn,
-    });
+    if (this.arrowDirection === 'up') {
+      this.timeline.reverse();
+      this.arrowDirection = 'down';
+    }
 
-    gsap.to(this.tile1textRef.nativeElement, {
-      opacity: 1,
-      y: -300,
-      duration: 0.5,
-      ease: Power2.easeIn,
-    });
 
   }
 
   ngOnInit(): void {
-
-    this.tile1Ref.nativeElement.addEventListener('mouseover', this.onMouseOver.bind(this));
-    this.tile1Ref.nativeElement.addEventListener('mouseout', this.onMouseOut.bind(this));
     this.tile1Ref.nativeElement.addEventListener('click', this.onMouseClick.bind(this));
   }
 
