@@ -10,9 +10,16 @@ import {Power2, TimelineMax} from 'gsap';
       </button>
 
 
-      <span #tile1text class="ot-tile1-text">
-    La mejor calidad gracias al respeto de las artes de pesca tradicionales, resultando en el exquisito sabor e inconfundible textura que marcan la diferencia en nuestros productos.
-  </span>
+      <div #tile1text class="ot-tile1-wrapper">
+        <span class="ot-tile1-text-1"> Producto Ortiz </span>
+        <span class="ot-tile1-text">
+            La mejor calidad gracias al respeto de las artes de pesca tradicionales, resultando en el exquisito sabor e inconfundible textura que marcan la diferencia en nuestros productos.
+        </span>
+
+        <a href="https://www.conservasortiz.com/productos/" class="ot-tile1-action">Compra aqui
+        </a>
+      </div>
+
 
       <button #arrowBlue class="ot-up-arrow"></button>
 
@@ -54,7 +61,7 @@ export class Tile1Component implements OnInit {
         })
         .to(this.tile1textRef.nativeElement, {
           opacity: 1,
-          y: -300,
+          y: -315,
           duration: 0.5,
           ease: Power2.easeInOut,
         });
@@ -71,7 +78,7 @@ export class Tile1Component implements OnInit {
   }
 
   ngOnInit(): void {
-    this.tile1Ref.nativeElement.addEventListener('click', this.onMouseClick.bind(this));
+    this.arrowBlueRef.nativeElement.addEventListener('click', this.onMouseClick.bind(this));
   }
 
 
