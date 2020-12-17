@@ -17,6 +17,7 @@ import {FadeInAnimationDirective} from './fade-in-animation.directive';
 import {TileTintComponent} from './tile-tint.component';
 import {TilePuzzleComponent} from './tile-puzzle.component';
 import {Tile1Component} from './tile1.component';
+import {TileHeroeComponent} from './tile-heroe.component';
 
 
 registerLocaleData(en);
@@ -31,7 +32,8 @@ registerLocaleData(en);
     FadeInAnimationDirective,
     TileTintComponent,
     TilePuzzleComponent,
-    Tile1Component
+    Tile1Component,
+    TileHeroeComponent
   ],
   imports: [
     BrowserModule,

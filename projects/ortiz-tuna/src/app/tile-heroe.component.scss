@@ -1,0 +1,54 @@
+.ot-tile-heroe {
+  padding: 0 20px;
+  align-items: center;
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  position: relative;
+}
+
+.ot-tn-play-pause {
+  bottom: 20px;
+  height: 55px;
+  left: 20px;
+  top: auto;
+  width: 55px;
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+  }
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  padding: 0;
+  position: absolute;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 1;
+
+  &:before {
+    bottom: 0;
+    left: 0;
+    background: #fff url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='15'%3E%3Cpath fill='%23132d3b' fill-rule='evenodd' d='M0 0l13 7.457-13 7.456z'/%3E%3C/svg%3E") 50% no-repeat;
+    content: "";
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 55px;
+    position: absolute;
+    text-indent: 0;
+    width: 55px;
+  }
+}
+
+.ot-tile-heroe-video {
+  z-index: 0;
+}
