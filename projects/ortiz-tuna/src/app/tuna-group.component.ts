@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'ot-tuna-group',
@@ -8,16 +7,10 @@ import {Router} from '@angular/router';
 })
 export class TunaGroupComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-
-  openTunaGame(): void {
-    this.router.navigate(['tuna-game']);
-
   }
 
 }
